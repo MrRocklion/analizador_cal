@@ -107,6 +107,8 @@ def generarPorcentajedeMuestra():
     option30 = window.radio30.isChecked()
     option40 = window.radio40.isChecked()
     option50 = window.radio50.isChecked()
+    estratificadoFlag = window.estratificado.isChecked()
+    print(f'se tomara datos estratificados {estratificadoFlag}')
     name_file = f'porcentaje {porcent}% {date.day}-{date.month}-{date.year} {date.hour}-{date.minute}-{date.second}'
 
     if option20:
@@ -132,20 +134,19 @@ def generarPorcentajedeMuestra():
     aux_porcentaje = 0.8
 
     if op1:
-        calcularPorcent(data_analisys,aux_porcentaje,file_name,1,option_cal)
+        calcularPorcent(data=data_analisys,porcent=aux_porcentaje,final_path=file_name,condition=1,cal=option_cal,estratificado=estratificadoFlag)
     elif op2:
-        calcularPorcent(data_analisys,aux_porcentaje,file_name,2,option_cal)
+        calcularPorcent(data=data_analisys,porcent=aux_porcentaje,final_path=file_name,condition=2,cal=option_cal,estratificado=estratificadoFlag)
     elif op3:
         if window.porcentaje.text() != '':
             aux_porcentaje = window.porcentaje.text()
             try:
                 aux_porcentaje = round(int(aux_porcentaje)/100,2)
-
             except:
                 aux_porcentaje = 0.8
         else:
             aux_porcentaje = 0.8
-        calcularPorcent(data_analisys,aux_porcentaje,file_name,3,option_cal)
+        calcularPorcent(data=data_analisys,porcent=aux_porcentaje,final_path=file_name,condition=3,cal=option_cal,estratificado=estratificadoFlag)
     
     
    
