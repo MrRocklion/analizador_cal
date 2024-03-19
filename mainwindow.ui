@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>426</width>
+    <height>446</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Analizador Cal</string>
+  </property>
+  <property name="windowIcon">
+   <iconset theme="accessories-calculator">
+    <normaloff>.</normaloff>.</iconset>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="10" column="2">
+            <widget class="QLabel" name="version">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="13" column="1">
+            <widget class="QLabel" name="proces">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="3">
+            <spacer name="horizontalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="0" column="1" colspan="3">
+            <widget class="QLabel" name="label">
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>GENERADOR DE CONSOLIDADO DE DATOS</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item row="14" column="1" colspan="3">
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="8" column="1" colspan="3">
+            <widget class="QPushButton" name="process">
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+
+background-color: rgb(41, 128, 185 );
+border-radius:3px;
+color:white;
+height:25px;
+}
+
+
+QPushButton:hover{
+background-color: rgb(93, 173, 226);
+border-radius:3px;
+color:white
+}
+
+QPushButton:pressed{
+background-color: rgb(40, 116, 166 );
+border-radius:3px;
+color:white
+}</string>
+             </property>
+             <property name="text">
+              <string>GENERAR DB</string>
+             </property>
+            </widget>
+           </item>
+           <item row="13" column="2" colspan="2">
+            <widget class="QLabel" name="file">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1" colspan="3">
+            <widget class="QGroupBox" name="groupBox">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>80</height>
+              </size>
+             </property>
+             <property name="title">
+              <string>Opciones</string>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_3">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_2">
+                <item>
+                 <widget class="QRadioButton" name="radio20">
+                  <property name="text">
+                   <string>cal 20</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QRadioButton" name="radio30">
+                  <property name="text">
+                   <string>cal 30</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QRadioButton" name="radio40">
+                  <property name="text">
+                   <string>cal 40</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QRadioButton" name="radio50">
+                  <property name="enabled">
+                   <bool>true</bool>
+                  </property>
+                  <property name="text">
+                   <string>cal 50</string>
+                  </property>
+                  <property name="checked">
+                   <bool>false</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="9" column="1" colspan="3">
+            <widget class="QGroupBox" name="groupBox_2">
+             <property name="font">
+              <font>
+               <weight>50</weight>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="title">
+              <string>Generacion muestral de acuerdo a un porcentaje especifico:</string>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <item>
+               <layout class="QGridLayout" name="gridLayout_2">
+                <item row="3" column="0" colspan="2">
+                 <widget class="QLineEdit" name="porcentaje">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
+                  <property name="text">
+                   <string>8</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="2">
+                 <widget class="QPushButton" name="btnporcent">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <property name="text">
+                   <string>GENERAR PORCENTAJE</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0" colspan="3">
+                 <widget class="QLabel" name="label_5">
+                  <property name="font">
+                   <font>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Ingrese el porcentaje en valores del 1 al 100:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QRadioButton" name="op2">
+                  <property name="text">
+                   <string>con confiabilidad</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QRadioButton" name="op1">
+                  <property name="text">
+                   <string>Todos</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="2">
+                 <widget class="QRadioButton" name="op3">
+                  <property name="text">
+                   <string>solo porcentaje</string>
+                  </property>
+                  <property name="checked">
+                   <bool>false</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0" colspan="2">
+                 <widget class="QCheckBox" name="checkBox">
+                  <property name="text">
+                   <string>Muestreo Estratificado</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="10" column="1">
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLabel" name="path_20">
+             <property name="text">
+              <string>C:/</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLabel" name="path_30">
+             <property name="text">
+              <string>C:/</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QLabel" name="path_40">
+             <property name="text">
+              <string>C:/</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QLabel" name="path_50">
+             <property name="text">
+              <string>C:/</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2" colspan="2">
+            <widget class="QPushButton" name="btn20">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+
+background-color: rgb(46, 204, 113 );
+border-radius:3px;
+color:white;
+height:25px;
+}
+
+
+QPushButton:hover{
+background-color: rgb(171, 235, 198);
+border-radius:3px;
+color:white
+}
+
+QPushButton:pressed{
+background-color: rgb(46, 204, 113 );
+border-radius:3px;
+color:white
+}</string>
+             </property>
+             <property name="text">
+              <string>CARPETA CAL20</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2" colspan="2">
+            <widget class="QPushButton" name="btn30">
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+
+background-color: rgb(46, 204, 113 );
+border-radius:3px;
+color:white;
+height:25px;
+}
+
+
+QPushButton:hover{
+background-color: rgb(171, 235, 198);
+border-radius:3px;
+color:white
+}
+
+QPushButton:pressed{
+background-color: rgb(46, 204, 113 );
+border-radius:3px;
+color:white
+}</string>
+             </property>
+             <property name="text">
+              <string>CARPETA CAL30</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="2" colspan="2">
+            <widget class="QPushButton" name="btn40">
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+
+background-color: rgb(46, 204, 113 );
+border-radius:3px;
+color:white;
+height:25px;
+}
+
+
+QPushButton:hover{
+background-color: rgb(171, 235, 198);
+border-radius:3px;
+color:white
+}
+
+QPushButton:pressed{
+background-color: rgb(46, 204, 113 );
+border-radius:3px;
+color:white
+}</string>
+             </property>
+             <property name="text">
+              <string>CARPETA CAL40</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="2" colspan="2">
+            <widget class="QPushButton" name="btn50">
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+
+background-color: rgb(46, 204, 113 );
+border-radius:3px;
+color:white;
+height:25px;
+}
+
+
+QPushButton:hover{
+background-color: rgb(171, 235, 198);
+border-radius:3px;
+color:white
+}
+
+QPushButton:pressed{
+background-color: rgb(46, 204, 113 );
+border-radius:3px;
+color:white
+}</string>
+             </property>
+             <property name="text">
+              <string>CARPETA CAL50</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

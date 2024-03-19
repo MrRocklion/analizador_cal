@@ -1,0 +1,12 @@
+/__pycache__
+/build
+/dist
+/CAL 20 CONSOLIDADO
+/CAL 30 CONSOLIDADO
+/CAL 40 CONSOLIDADO
+/CAL 50 CONSOLIDADO
+*.rar
+main.spec
+*.csv
+*.json
+test.xlsx
